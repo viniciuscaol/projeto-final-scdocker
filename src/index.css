@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-.cabecalho {
-   width: 100%;
-   padding-top: 45px;
-   padding-left: 15px;
-   height: 120px;
-   background-color: #1F0049;
-   color: #FFFFFF; 
-}
-
 .conteudo {
     width: 100%;
     min-height: calc(100vh - 240px);
