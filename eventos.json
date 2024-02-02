@@ -1,0 +1,31 @@
+{
+    "eventos": [
+        {
+            "titulo": "Formatura Colegio D. Pedro",
+            "data": "12/02/2024",
+            "horario": "20:00",
+            "preco": 0,
+            "link": "https://www.instagram.com/",
+            "texto_link": "Clique para acessar o perfil do evento no Instagram",
+            "evento_privado": true
+        },
+        {
+            "titulo": "Concurso de Fantasias",
+            "data": "15/02/2024",
+            "horario": "20:00",
+            "preco": 40,
+            "link": "https://www.instagram.com/",
+            "texto_link": "Clique para acessar o perfil do evento no Instagram",
+            "evento_privado": false
+        },
+        {
+            "titulo": "Casamento Florinda e Girafales",
+            "data": "09/03/2024",
+            "horario": "16:00",
+            "preco": 0,
+            "link": "https://www.instagram.com/",
+            "texto_link": "Clique para acessar o perfil do evento no Instagram",
+            "evento_privado": false
+        }
+    ]
+}
