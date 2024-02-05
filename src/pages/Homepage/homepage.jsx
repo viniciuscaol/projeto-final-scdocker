@@ -37,8 +37,7 @@ function Homepage() {
                         </EventosItem>
                         ))}
                     </EventosLista>
-                </Eventos>
-                
+                </Eventos>               
             </Container>
             <Rodape />
         </>

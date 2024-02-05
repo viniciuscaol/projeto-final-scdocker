@@ -24,5 +24,17 @@
             "url_da_imagem": "https://imgsapp.em.com.br/app/noticia_127983242361/2023/05/21/1496049/uma-cor-que-esta-totalmente-proibida-para-as-convidadas-de-acordo-com-a-etiqueta-de-casamento-e-o-branco-que-esta-reservado-para-as-noivas-a-nao-ser-que-o-casamento-seja-na-praia_1_55583.jpg",
             "evento_privado": false
         }
+    ],
+    "usuarios" : [
+        {
+            "nome": "Gustavo",
+            "email": "gustavo@ig.com.br",
+            "senha": "123456"
+        },
+        {
+            "nome": "João",
+            "email": "joao@ig.com.br",
+            "senha": "123456"
+        }
     ]
 }
