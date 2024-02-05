@@ -5,8 +5,7 @@
             "data": "12/02/2024",
             "horario": "20:00",
             "preco": 0,
-            "link": "https://www.instagram.com/",
-            "texto_link": "Clique para acessar o perfil do evento no Instagram",
+            "url_da_imagem": "https://roofranklin.github.io/casa-de-eventos/img/formatura.jpeg",
             "evento_privado": true
         },
         {
@@ -14,8 +13,7 @@
             "data": "15/02/2024",
             "horario": "20:00",
             "preco": 40,
-            "link": "https://www.instagram.com/",
-            "texto_link": "Clique para acessar o perfil do evento no Instagram",
+            "url_da_imagem": "https://uniao.ugv.edu.br/content/uploads/2023/03/2K4A9490.jpg",
             "evento_privado": false
         },
         {
@@ -23,8 +21,7 @@
             "data": "09/03/2024",
             "horario": "16:00",
             "preco": 0,
-            "link": "https://www.instagram.com/",
-            "texto_link": "Clique para acessar o perfil do evento no Instagram",
+            "url_da_imagem": "https://imgsapp.em.com.br/app/noticia_127983242361/2023/05/21/1496049/uma-cor-que-esta-totalmente-proibida-para-as-convidadas-de-acordo-com-a-etiqueta-de-casamento-e-o-branco-que-esta-reservado-para-as-noivas-a-nao-ser-que-o-casamento-seja-na-praia_1_55583.jpg",
             "evento_privado": false
         }
     ]
