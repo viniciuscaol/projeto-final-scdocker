@@ -15,7 +15,7 @@ const Login = () => {
             const usuarios = response.data;
             const usuarioEncontrado = usuarios.find(usuario => usuario.nome === nome && usuario.senha === senha);
             if (usuarioEncontrado) {
-                navigate('/homepage');
+                navigate('/admin');
             } else {
                 setErro('Nome ou senha inválido');
             }
