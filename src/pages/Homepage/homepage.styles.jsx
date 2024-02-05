@@ -19,3 +19,25 @@ export const Slogan = styled.p`
     line-height: 2em;
     color: #6F9F9C;
 `
+
+export const Eventos = styled.div`
+   
+`
+export const EventosLista = styled.ul`
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 20px 0 40px 0;
+`
+export const EventosItem = styled.li`
+   
+`
+export const EventoTitulo = styled.h2`
+   
+`
+export const EventoImagem = styled.img`
+   
+`
+export const EventoDataHora = styled.p`
+   
+`
