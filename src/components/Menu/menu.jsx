@@ -32,7 +32,7 @@ function Menu() {
             <MenuContainer>
                 <MenuList>
                     <MenuItem>
-                        <MenuLink to="/homepage">Homepage</MenuLink>
+                        <MenuLink to="/">Homepage</MenuLink>
                     </MenuItem>
                     <MenuItem>
                         <MenuLink to="/contato">Contato</MenuLink>
