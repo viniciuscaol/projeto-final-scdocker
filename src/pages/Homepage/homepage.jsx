@@ -20,6 +20,7 @@ function Homepage() {
         }
         listarEventos();
     })
+
     return (
         <>
             <Cabecalho />
@@ -39,7 +40,7 @@ function Homepage() {
                         />
                         ))}
                     </EventosLista>
-                </Eventos>               
+                </Eventos> 
             </Container>
             <Rodape />
         </>
