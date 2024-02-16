@@ -1,16 +1,7 @@
 {
   "eventos": [
     {
-      "id": 1,
-      "titulo": "Formatura Colegio D. Pedro",
-      "data": "12/02/2024",
-      "horario": "20:00",
-      "preco": 0,
-      "url_da_imagem": "https://roofranklin.github.io/casa-de-eventos/img/formatura.jpeg",
-      "evento_privado": true
-    },
-    {
-      "id": 2,
+      "id": "2",
       "titulo": "Concurso de Fantasias",
       "data": "15/02/2024",
       "horario": "20:00",
@@ -19,7 +10,7 @@
       "evento_privado": false
     },
     {
-      "id": 3,
+      "id": "3",
       "titulo": "Casamento Florinda e Girafales",
       "data": "09/03/2024",
       "horario": "16:00",
@@ -32,12 +23,14 @@
     {
       "nome": "Gustavo",
       "email": "gustavo@ig.com.br",
-      "senha": "123456"
+      "senha": "123456",
+      "id": "77d2"
     },
     {
       "nome": "João",
       "email": "joao@ig.com.br",
-      "senha": "123456"
+      "senha": "123456",
+      "id": "62ce"
     }
   ]
 }

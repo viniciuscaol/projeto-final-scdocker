@@ -21,7 +21,14 @@ function ListaEventos() {
     const [eventos, setEventos] = useState([]);
 
     const excluirEvento = async (id) => {
-        console.log(id);
+        try {
+            await axios.delete(`http://localhost:3000/eventos/${id}`);
+            const eventosFiltrados = eventos.filter(evento => evento.id !== id);
+            setEventos(eventosFiltrados);
+            alert("Evento excluído com sucesso!");
+        } catch (error) {
+            console.error('Erro ao excluir evento', error);
+        }
     }
 
     useEffect(() => {
