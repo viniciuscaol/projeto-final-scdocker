@@ -1,6 +1,15 @@
 {
   "eventos": [
     {
+      "id": 1,
+      "titulo": "Formatura Colegio D. Pedro",
+      "data": "12/02/2024",
+      "horario": "20:00",
+      "preco": 0,
+      "url_da_imagem": "https://roofranklin.github.io/casa-de-eventos/img/formatura.jpeg",
+      "evento_privado": true
+    },
+    {
       "id": "2",
       "titulo": "Concurso de Fantasias",
       "data": "15/02/2024",
