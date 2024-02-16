@@ -3,6 +3,24 @@ import { useNavigate } from 'react-router-dom';
 
 import axios from 'axios'
 
+import {
+        LoginContainer,
+        LoginContent,
+        LoginBox,
+        LoginTitle,
+        FormBox,
+        FormItem,
+        FormLabel,
+        FormInput,
+        FormButton,
+        Sidebar,
+        SidebarContainer,
+        LogoContainer,
+        Logo,
+        ErrorMessage
+       } from './login.styles'
+
+
 const Login = () => {
     // AQUI FICAM OS MEUS HOOKS, FUNÇÕES, ETC..
     
@@ -31,13 +49,34 @@ const Login = () => {
     };
     return (
         // AQUI ENTRA O FORMULÁRIO DA TELA
-        <div>
-            <h1>Login</h1>
-            <input type="text" placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)} />
-            <input type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
-            <button onClick={EfetuarLogin}>Entrar</button>
-            {erro && <p>{erro}</p>}
-        </div>
+        <LoginContainer>
+            <Sidebar>
+                <SidebarContainer>
+                    <LogoContainer>
+                        <Logo src="../images/logo.svg" alt="Logomarca da casa de eventos" />
+                    </LogoContainer>
+                </SidebarContainer>
+            </Sidebar>
+            <LoginContent>
+                <LoginBox>
+                    <LoginTitle>Área de login</LoginTitle>
+                    <FormBox>
+                        <FormItem>
+                            <FormLabel>Nome:</FormLabel>
+                            <FormInput type="text" placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)} />
+                        </FormItem>
+                        <FormItem>
+                            <FormLabel>Senha:</FormLabel>
+                            <FormInput type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
+                        </FormItem>
+                        <FormItem>
+                            <FormButton onClick={EfetuarLogin}>Entrar</FormButton>
+                        </FormItem>
+                        {erro && <ErrorMessage>{erro}</ErrorMessage>}
+                    </FormBox>
+                </LoginBox>
+            </LoginContent>          
+        </LoginContainer>
     );
 
 };
