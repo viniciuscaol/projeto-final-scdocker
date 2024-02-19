@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Cabecalho from '../../components/Cabecalho/cabecalho'
 import Rodape from '../../components/Rodape/rodape'
@@ -25,9 +27,15 @@ function ListaEventos() {
             await axios.delete(`http://localhost:3000/eventos/${id}`);
             const eventosFiltrados = eventos.filter(evento => evento.id !== id);
             setEventos(eventosFiltrados);
-            alert("Evento excluído com sucesso!");
+            toast.success('Evento removido com sucesso!', {
+                position: "top-right",
+                autoClose: 3000,
+            });
         } catch (error) {
-            console.error('Erro ao excluir evento', error);
+            toast.error('Ocorreu um erro ao deletar a mensagem! ' + error , {
+                position: "top-right",
+                autoClose: 3000,
+            });
         }
     }
 
@@ -65,7 +73,7 @@ function ListaEventos() {
                             <EventoItem>{ evento.data } - { evento.horario }</EventoItem>
                             <EventoItem>{ evento.preco }</EventoItem>
                             <EventoItem>{ evento.url_da_imagem }</EventoItem>
-                            <EventoItem>{ evento.esta_privado }</EventoItem>
+                            <EventoItem>{ evento.evento_privado ? 'Sim' : 'Não' }</EventoItem>
                             <EventoItem>
                                 <BotaoRemover onClick={() => {excluirEvento(evento.id)}}>Excluir</BotaoRemover>
                             </EventoItem>                           
@@ -73,6 +81,7 @@ function ListaEventos() {
                         ))}
                     </CorpoTabela>
                 </Tabela>
+                <ToastContainer />
             </ListaContainer>
             <Rodape />
         </>
