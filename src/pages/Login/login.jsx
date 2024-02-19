@@ -39,7 +39,14 @@ const Login = () => {
             // VERIFICA SE USUÁRIO E SENHA FORAM ENCONTRADOS
             const usuarioEncontrado = usuarios.find(usuario => usuario.nome === nome && usuario.senha === senha);
             if (usuarioEncontrado) {
-                navigate('/admin');
+                toast.success('Login efetuado com sucesso!', {
+                    position: "top-right",
+                    autoClose: 3000,
+                });
+                setTimeout(() => {
+                    navigate('/admin');
+                }, 3000);
+                
             } else {
                 toast.error('Nome ou senha inválidos', {
                     position: "top-right",
