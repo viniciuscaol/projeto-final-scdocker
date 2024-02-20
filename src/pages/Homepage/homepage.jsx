@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Container, Title, Slogan, Eventos, EventosLista } from './homepage.styles' 
 import axios from 'axios'
 
@@ -8,6 +8,7 @@ import Card from '../../components/Card/card'
 function Homepage() {
 
     const [eventos, setEventos] = useState([]);
+    const [filtroTitulo, setFiltroTitulo] = useState('');
 
     useEffect(() => {
         const listarEventos = async () => {
@@ -21,15 +22,31 @@ function Homepage() {
         listarEventos();
     })
 
+    const eventosFiltrados = useMemo(() => {
+        return eventos.filter( evento =>
+            evento.titulo.toLowerCase().includes(filtroTitulo.toLowerCase())
+        );
+    }, [eventos, filtroTitulo]);
+
+    const handleInputChange = (e) => {
+        setFiltroTitulo(e.target.value);
+    }
+
     return (
         <>
             <Cabecalho />
             <Container>
                 <Title>Bem vindo a Casa de eventos!</Title>
                 <Slogan>Essa é a casa de festas que realiza sonhos.</Slogan>
+                <input
+                    type="text"
+                    placeholder="Procure por eventos"
+                    value={filtroTitulo}
+                    onChange={handleInputChange}
+                />
                 <Eventos>
                     <EventosLista>
-                        { eventos.map((evento, index) => (
+                        { eventosFiltrados.map((evento, index) => (
                         <Card
                             key={ index }
                             titulo={ evento.titulo } 
