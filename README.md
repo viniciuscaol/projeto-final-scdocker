@@ -23,15 +23,15 @@ Este repositório contém o projeto "Sistema de Casa de Eventos", que foi contei
 Para instalar o projeto localmente, siga os passos abaixo:
 
 1. **Clone o repositório**:
-<br>
-   ``` bash
+
+   ```bash
    git clone https://github.com/viniciuscaol/projeto-final-scdocker.git
    cd projeto-final-scdocker
    ```
 
 2. **Instale as dependências**:
-<br>
-    ``` bash
+
+    ```bash
     npm install
     ```
 
@@ -40,17 +40,19 @@ Para instalar o projeto localmente, siga os passos abaixo:
 Para executar o contêiner da aplicação diretamente do repositório, siga as instruções abaixo:
 
 1. **Baixe e execute o contêiner**:
-<br>
-    ``` bash
+
+    ```bash
     docker run -d -p 8080:5173 -p 3000:3000 viniciuscaol/projetofinalscdocker
     ```
+
+<br>
 
 - O parâmetro `-d` executa o contêiner em segundo plano (modo "detached").
 - A porta `8080` no host será redirecionada para a porta `5173` do contêiner, que é onde o frontend está rodando.
 - A porta `3000` do host será redirecionada para a mesma porta do contêiner, onde o backend está disponível.
 
 2. **Acesse a aplicação**:
-<br>
+
     - Frontend: http://localhost:8080
     - Backend: http://localhost:3000
 
@@ -68,8 +70,8 @@ O `Dockerfile` neste repositório foi criado para facilitar a conteinerização 
 
 #### Instruções para construir e rodar a aplicação com Docker
 1. **Estrutura do** `Dockerfile`
-<br>
-    ``` bash
+
+    ```bash
     FROM node:20.5.1
     WORKDIR /usr/src/app
     COPY package*.json ./
@@ -80,29 +82,38 @@ O `Dockerfile` neste repositório foi criado para facilitar a conteinerização 
     EXPOSE 3000
     CMD ["sh", "-c", "npm run dev -- --host & json-server --watch eventos.json"]
     ```
-2. **Construa a imagem Docker**:
+
 <br>
-    ``` bash
+
+2. **Construa a imagem Docker**:
+
+    ```bash
     docker build -t projeto-final .
     ```
 
-3. **Execute o contêiner**:
 <br>
-    ``` bash
+
+3. **Execute o contêiner**:
+
+    ```bash
     docker run -p 5173:5173 -p 3000:3000 projeto-final
     ```
 
-4. **Acesse a aplicação**:
 <br>
+
+4. **Acesse a aplicação**:
+
     - Frontend: http://localhost:5173
     - Mock Server: http://localhost:3000
+
+<br>
 
 ## Docker Compose
 #### Instruções para usar Docker Compose
 
 1. **Estrutura do** `docker-compose.yaml`
-<br>
-    ``` yaml
+
+    ```yaml
     version: '3.8'
     services:
         frontend:
@@ -126,21 +137,22 @@ O `Dockerfile` neste repositório foi criado para facilitar a conteinerização 
 <br>
 
 2. **Inicie os serviços**:
-<br>
-    ``` bash
+
+    ```bash
     docker compose up -d
     ```
 <br>
 
 3. **Acesse a aplicação**:
-<br>
+
     - Frontend: http://localhost:8080
     - Backend: http://localhost:3000
+
 <br>
 
 4. **Parar os serviçoes**:
-<br>
-    ``` bash
+
+    ```bash
     docker compose down
     ```
 <br>
