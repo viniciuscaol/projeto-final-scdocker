@@ -24,14 +24,14 @@ Para instalar o projeto localmente, siga os passos abaixo:
 
 1. **Clone o repositório**:
 <br>
-   ```bash
+   ``` bash
    git clone https://github.com/viniciuscaol/projeto-final-scdocker.git
    cd projeto-final-scdocker
    ```
 
 2. **Instale as dependências**:
 <br>
-    ```bash
+    ``` bash
     npm install
     ```
 
@@ -41,7 +41,7 @@ Para executar o contêiner da aplicação diretamente do repositório, siga as i
 
 1. **Baixe e execute o contêiner**:
 <br>
-    ```bash
+    ``` bash
     docker run -d -p 8080:5173 -p 3000:3000 viniciuscaol/projetofinalscdocker
     ```
 
@@ -69,7 +69,7 @@ O `Dockerfile` neste repositório foi criado para facilitar a conteinerização 
 #### Instruções para construir e rodar a aplicação com Docker
 1. **Estrutura do** `Dockerfile`
 <br>
-    ```bash
+    ``` bash
     FROM node:20.5.1
     WORKDIR /usr/src/app
     COPY package*.json ./
@@ -82,13 +82,13 @@ O `Dockerfile` neste repositório foi criado para facilitar a conteinerização 
     ```
 2. **Construa a imagem Docker**:
 <br>
-    ```bash
+    ``` bash
     docker build -t projeto-final .
     ```
 
 3. **Execute o contêiner**:
 <br>
-    ```bash
+    ``` bash
     docker run -p 5173:5173 -p 3000:3000 projeto-final
     ```
 
@@ -102,7 +102,7 @@ O `Dockerfile` neste repositório foi criado para facilitar a conteinerização 
 
 1. **Estrutura do** `docker-compose.yaml`
 <br>
-    ```yaml
+    ``` yaml
     version: '3.8'
     services:
         frontend:
@@ -127,7 +127,7 @@ O `Dockerfile` neste repositório foi criado para facilitar a conteinerização 
 
 2. **Inicie os serviços**:
 <br>
-    ```bash
+    ``` bash
     docker compose up -d
     ```
 <br>
@@ -140,7 +140,7 @@ O `Dockerfile` neste repositório foi criado para facilitar a conteinerização 
 
 4. **Parar os serviçoes**:
 <br>
-    ```bash
+    ``` bash
     docker compose down
     ```
 <br>
