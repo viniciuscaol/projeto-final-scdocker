@@ -1,0 +1,27 @@
+# Ignorar node_modules e arquivos de log
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignorar dependências locais do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar o diretório de build do Vite (caso seja gerado)
+dist
+
+# Ignorar o Git
+.git
+.gitignore
+
+# Ignorar arquivos de configuração do editor
+.vscode
+.idea
+
+# Ignorar arquivos de teste
+*.test.*
+__tests__
+
+# Ignorar arquivos de cache
+.cache
