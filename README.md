@@ -136,6 +136,37 @@ O `Dockerfile` neste repositório foi criado para facilitar a conteinerização 
     ```
 <br>
 
+- **Estrutura do** `Dockerfile-front`:
+
+    ```bash
+    FROM node:20.5.1 AS build
+    WORKDIR /app
+    COPY package*.json ./
+    RUN npm install
+    COPY . .
+    RUN npm run build
+    FROM nginx:alpine
+    COPY --from=build /app/dist /usr/share/nginx/html
+    EXPOSE 80
+    CMD ["nginx", "-g", "daemon off;"]
+    ```
+
+<br>
+
+- **Estrutura do** `Dockerfile-back`:
+
+    ```bash
+    FROM node:20.5.1
+    WORKDIR /app
+    COPY package*.json ./
+    RUN npm install json-server --save-dev
+    COPY eventos.json ./
+    EXPOSE 3000
+    CMD ["npx", "json-server", "--watch", "eventos.json", "--host", "0.0.0.0"]
+    ```
+
+<br>
+
 2. **Inicie os serviços**:
 
     ```bash
